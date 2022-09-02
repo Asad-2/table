@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+        color: aliceblue;
+    }
+    .container{
+        width:30%;
+        height:300px;
+        float: left;
+        color:aliceblue;
+        background-color: #800000;
+        border: 5px solid white;
+    }
+    .button {
+        color:green;
+        text-align: center;
+        padding: 15px 32px;
+        border:#4CAF50 2px solid;
+    }
+    .button:hover {
+        background-color: #4CAF50; 
+        color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        <form onsubmit="doSum(); return false">
+        <br>
+        <br>
+        num1:<input type="number" placeholder="Enter a number" id="num1">
+        <br>
+        <br>
+        num2:<input type="number" value="10" id="num2">
+        <br>
+        <br>
+        <button class ="button" type="submit">Submit</button>
+     </form>
+     <h3 id="result"> </h3>
+     </div>
+
+     <script>
+        let firstNumber = +document.querySelector("#num1").value
+        let secondNumber = +document.querySelector("#num2").value
+
+        let resultElement = document.querySelector("#result")
+
+       // for (firstNumber =" "  ; secondNumber=" " ; firstNumber++) {
+           // resultElement.innerHTML = ("firstNumber X ${firstNumber}= ${firstNumber*secondNumber}")
+      //  }
+     </script>
+    
+</body>
+</html>
