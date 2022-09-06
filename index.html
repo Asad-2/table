@@ -6,56 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table</title>
 </head>
-<style>
-    body{
-        background-color: bisque;
-        color: aliceblue;
-    }
-    .container{
-        width:30%;
-        height:300px;
-        float: left;
-        color:aliceblue;
-        background-color: #800000;
-        border: 5px solid white;
-    }
-    .button {
-        color:green;
-        text-align: center;
-        padding: 15px 32px;
-        border:#4CAF50 2px solid;
-    }
-    .button:hover {
-        background-color: #4CAF50; 
-        color: white;
-    }
-</style>
 <body>
-    <div class="container">
-        <form onsubmit="doSum(); return false">
-        <br>
-        <br>
-        num1:<input type="number" placeholder="Enter a number" id="num1">
-        <br>
-        <br>
-        num2:<input type="number" value="10" id="num2">
-        <br>
-        <br>
-        <button class ="button" type="submit">Submit</button>
+    <h1>Multipication table</h1>
+     <form onsubmit="doprinttable(); return false">
+      which Table: <input type="number"  id="num" required>
+      <br>
+      <br>
+      how many times <input type="number" id="times" value="10" required>
+       <br>
+       <br>
+       <button type="submit"> submit </button>
      </form>
-     <h3 id="result"> </h3>
-     </div>
+     <br>
 
-     <script>
-        let firstNumber = +document.querySelector("#num1").value
-        let secondNumber = +document.querySelector("#num2").value
+       <h3 id="result" > </h3>
+       <br>
 
-        let resultElement = document.querySelector("#result")
+       <script>
+        function doprinttable () 
+        {
+            let num = +document.querySelector("#num").value;
+            let times = +document.querySelector("#times").value;
 
-       // for (firstNumber =" "  ; secondNumber=" " ; firstNumber++) {
-           // resultElement.innerHTML = ("firstNumber X ${firstNumber}= ${firstNumber*secondNumber}")
-      //  }
-     </script>
+            let result = document.querySelector("#result");
+            result.innerHTML="";
+
+            for (i=0; i < times; i++)
+            {
+                console.log("i: ",i);
+                let count = i+1
+
+
+                result.innerHTML +=  `${num} x ${count} = ${num * count} <br>`
+
+            }
+
+        }
+       </script>
+
     
 </body>
 </html>
